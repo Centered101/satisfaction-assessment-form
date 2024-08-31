@@ -1,0 +1,277 @@
+/* font จาก google fonts */
+/* font-family: 'Press Start 2P', system-ui; */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+/* font-family: 'Bai Jamjuree', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap");
+/* font-family: "Kanit", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* -style--------------------------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+โ body,
+input,
+button {
+    font-size: 100%;
+    /* ปรับขนาดฟอนต์เป็น 100% ของขนาดปกติ */
+}
+
+@media screen and (max-width: 768px) {
+
+    body,
+    input,
+    button {
+        font-size: 80%;
+        /* ลดขนาดฟอนต์เมื่อหน้าจอมีความกว้างไม่เกิน 768px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    body,
+    input,
+    button {
+        font-size: 70%;
+        /* ลดขนาดฟอนต์เมื่อหน้าจอมีความกว้างไม่เกิน 480px */
+    }
+}
+
+small {
+    color: #000000;
+    font-size: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    small {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    small {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 40px 20px;
+    margin: 0;
+    background-color: #84d4fa;
+}
+
+.container {
+    max-width: 600px;
+    min-width: 400px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #0000001a;
+}
+
+img {
+    user-select: none;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    margin: 0 0 20px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+span {
+    color: #ff0000;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+table {
+    width: 100%;
+}
+
+@media (min-width: 568px) {
+
+    th,
+    td {
+        word-break: keep-all;
+    }
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0 0 0;
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    vertical-align: middle;
+    background-color: #f7f7f7;
+}
+
+input[type="radio"] {
+    position: absolute;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    margin-right: 10px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+input[type="submit"],
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit {
+    display: none;
+    padding: 10px;
+    background-color: #1ED760;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #004494;
+}
+
+.section-2 {
+    display: none;
+}
+
+.section-3 {
+    display: none;
+}
+
+.section-4 {
+    display: none;
+}
+
+.section-5 {
+    display: none;
+}
+
+
+.rating {
+    display: flex;
+    justify-content: space-evenly;
+    /* box-shadow: 0 0 0 5px #ffffff80; */
+    background-color: #0056b3;
+    padding: .4rem .4rem .1rem .4rem;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.svg {
+    fill: #f2f2f2;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.super-happy,
+.neutral,
+.super-sad {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.super-happy[class="super-happy"]:hover+svg,
+.super-happy[class="super-happy"]:checked+svg,
+.super-happy[class="super-happy"]:focus+svg {
+    fill: #00cc4f;
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+.neutral[class="neutral"]:hover+svg,
+.neutral[class="neutral"]:checked+svg,
+.neutral[class="neutral"]:focus+svg {
+    fill: #e8d600;
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+.super-sad[class="super-sad"]:hover+svg,
+.super-sad[class="super-sad"]:checked+svg,
+.super-sad[class="super-sad"]:focus+svg {
+    fill: #EF2A10;
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+.gender[class="gender"]:hover+svg,
+.gender[class="gender"]:checked+svg,
+.gender[class="gender"]:focus+svg,
+.satisfaction[class="satisfaction"]:hover+svg,
+.satisfaction[class="satisfaction"]:checked+svg,
+.satisfaction[class="satisfaction"]:focus+svg {
+    fill: #EF2A10;
+    cursor: pointer;
+    background-color: #0056b3;
+    border-radius: 50%;
+    transition: .1s;
+    transform: scale(1.2);
+}
+
+.card {
+    padding: 20px;
+    font-size: 50px;
+    margin-block: 20px;
+    height: 500px;
+    background-color: #f2f2f2;
+    color: #999999;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+    cursor: pointer;
+    fill: #999999;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #ffffff33;
+}
